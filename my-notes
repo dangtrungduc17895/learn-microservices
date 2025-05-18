@@ -1,0 +1,8 @@
+Hiện tại tôi đang nghiên cứu về đọc quyển sách Building Microservices của Newman
+Đang đọc đến phần mà ông ấy nói về 3 đặc điểm cần lưu ý khi Model hoá Microservices: Information Hiding, Coupling, Cohesion.
+Theo như tôi hiểu
+- Information Hiding: mỗi service nên giới hạn và kiểm soát thông tin chia sẻ ra ngoài. Giống như 1 chiếc hộp đen, chỉ chia sẻ API, queue mà các bên khác cần dùng. Vì vậy thì DB cũng nên được quản lý riêng và không cho các bên khác truy cập sử dụng.
+- Cohesion (mạch lạc): những thành phần liên quan mất thiết đến nhau, đến mức mà mỗi khi có sự thay đổi thì tất cả đều phải cùng thay đổi thì nên để cùng 1 chỗ, tránh trường hợp phải sửa nhiều nơi, deploy nhiều service. Và ngược lại, không nên để quá nhiều trách nhiệm cho 1 service, ví dụ order, kho bãi, thanh toán, 
+sẽ khiến service trở nên phức tạp, khó bảo trì.
+- Coupling (kết nối): sự kết nối giữa các service nên lỏng lẻo hết mức có thể, khi cần thay đổi thì không ảnh hưởng đến các service khác. 
+Note 1: 1 hệ thống có tính Cohesion càng cao thì Coupling càng thấp -> Hệ thống Microservice tốt.
