@@ -12,4 +12,9 @@ Các loại Coupling
 - Pass-through Coupling -> truyền data qua service trung gian
 - Common Coupling -> Dùng chung resource như file, database
 - Content Coupling -> Gần giống Common nhưng ở cấp độ cao hơn khi Service này cần sử dụng rất nhiều thông tin của service khác bao gồm cả access, sửa đổi tài nguyên của service khác kia
-Note 2: Domain là có thể chấp nhận được, nên dùng public APi và các kiểu giao tiếp bất đồng bộ. Content Coupling là loại phải tệ nhất, cần xây dưnng theo Information Hiding.
+Note 2: Domain là có thể chấp nhận được, nên dùng public APi và các kiểu giao tiếp bất đồng bộ. Content Coupling là loại tệ nhất nên tránh, cần xây dựng theo Information Hiding.
+
+Ba vấn đề nổi bật trong DDD
+- Ubiquitous Language: Sử dụng ngôn ngữ chung từ Business trong code, giúp phần mềm và người kinh doanh tránh nhầm lẫn
+- Aggregate: Là các thực thể thường là đặc trưng cho 1 Service, có một Aggregate root chứa các aggregate khác, các Service ngoài sẽ làm việc thông qua root để tránh trở thành content coupling hay common
+- Bounded context: Là ranh giới giúp chúng ta chia ra các Service trong hệ thống. Từ đây chúng ta sẽ có các ubiquitious language và aggregate tương ứng với mỗi một bounded
